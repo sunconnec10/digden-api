@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('labels', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('content_id')->index();
+            $table->string('title');
             $table->timestamps();
         });
     }

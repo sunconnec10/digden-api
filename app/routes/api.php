@@ -18,6 +18,4 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('/check', function (){
-  return response()->json(['message' => 'got it']);
-});
+Route::get('content/{content}', 'ContentController@show');
